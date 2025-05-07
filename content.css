@@ -1,0 +1,75 @@
+.chatgpt-pin-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  position: relative;
+  margin-left: 0px;
+  margin-right: 2px;
+  flex-shrink: 0;
+}
+
+.chatgpt-pin-button:hover {
+  background-color: rgba(59, 130, 246, 0.1);
+}
+
+.chatgpt-pin-button svg {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: #6B7280;
+  stroke-width: 2;
+  transition: all 0.2s ease;
+}
+
+.chatgpt-pin-button:hover svg {
+  stroke: #3B82F6;
+}
+
+.chatgpt-pin-button.active svg {
+  fill: #3B82F6;
+  stroke: #3B82F6;
+}
+
+.chatgpt-pin-button.active:hover svg {
+  fill: #2563EB;
+  stroke: #2563EB;
+}
+
+.chatgpt-pin-tooltip {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 8px;
+  padding: 4px 8px;
+  background-color: #1F2937;
+  color: white;
+  font-size: 12px;
+  border-radius: 4px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+  z-index: 1000;
+}
+
+.chatgpt-pin-button:hover .chatgpt-pin-tooltip {
+  opacity: 1;
+}
+
+@keyframes pinSuccess {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.3); }
+  100% { transform: scale(1); }
+}
+
+.pin-animation {
+  animation: pinSuccess 0.3s ease;
+}

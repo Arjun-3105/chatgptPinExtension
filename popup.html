@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ChatGPT Pin</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>Pinned Conversations</h1>
+      <div class="search-container">
+        <input type="text" id="search-input" placeholder="Search conversations...">
+      </div>
+    </header>
+    
+    <div class="content">
+      <div id="no-pins" class="hidden">
+        <p>No pinned conversations yet</p>
+        <p class="hint">Visit ChatGPT and pin conversations to see them here</p>
+      </div>
+      
+      <ul id="conversations-list"></ul>
+    </div>
+    
+    <footer>
+      <p>ChatGPT Pin &copy; 2025</p>
+    </footer>
+  </div>
+  
+  <script src="utils/storage.js"></script>
+  <script src="components/PinnedItem.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
